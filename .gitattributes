@@ -25,9 +25,7 @@ prive/squelettes/contenu/plan.html -text
 prive/squelettes/head/plan.html -text
 prive/squelettes/inclure/plan-articles.html -text
 prive/squelettes/inclure/plan-articles_fonctions.php -text
-prive/squelettes/inclure/plan-breves.html -text
 prive/squelettes/inclure/plan-rubriques.html -text
-prive/squelettes/inclure/plan-syndic.html -text
 prive/squelettes/inclure/plan.html -text
 prive/themes/spip/images/plan-128.png -text
 prive/themes/spip/images/plan-16.png -text
