@@ -118,7 +118,7 @@ function plan_lister_objets_rubrique_statuts() {
  * Trouve les objets qui peuvent s'afficher dans le plan de page,
  * dans une rubrique ainsi que leurs statuts utilisables pour l'auteur en cours
  *
- * @uses plan_lister_objets_rubrique_statuts();
+ * @uses plan_lister_objets_rubrique_statuts()
  * 
  * @return array
 **/
