@@ -9,7 +9,9 @@
  * @package    SPIP\Plan\Fonctions
  */
 
-if (!defined('_ECRIRE_INC_VERSION')) return;
+if (!defined('_ECRIRE_INC_VERSION')) {
+	return;
+}
 
 /**
  * Retourne le nombre d'éléments d'une liste d'objet qui fait qu'on
@@ -17,7 +19,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * après clic…
  *
  * @return int nombre
-**/
+ **/
 function plan_limiter_listes() {
 	return defined('_PLAN_LIMITER_LISTES') ? _PLAN_LIMITER_LISTES : 50;
 }
@@ -34,7 +36,7 @@ function plan_limiter_listes() {
  *
  * @param Pile $p
  * @return Pile
-**/
+ **/
 function balise_PLAN_AFFICHER_LISTE_dist($p) {
 
 	// #GRAND_TOTAL
@@ -54,7 +56,7 @@ function balise_PLAN_AFFICHER_LISTE_dist($p) {
  * Trouve les objets qui peuvent s'afficher dans le plan de page, dans une rubrique
  *
  * @return array [table -> chemin du squelette]
-**/
+ **/
 function plan_lister_objets_rubrique() {
 	static $liste = null;
 	if (is_null($liste)) {
@@ -81,11 +83,11 @@ function plan_lister_objets_rubrique() {
  *     Tous les statuts sont ici retournés, même ceux que ne peuvent pas
  *     forcément utiliser l'auteur en cours.
  *
- * @see plan_lister_objets_rubrique_statuts_auteur()
+ * @see  plan_lister_objets_rubrique_statuts_auteur()
  * @uses plan_lister_objets_rubrique()
- * 
+ *
  * @return array
-**/
+ **/
 function plan_lister_objets_rubrique_statuts() {
 	static $liste = null;
 	if (is_null($liste)) {
@@ -106,10 +108,11 @@ function plan_lister_objets_rubrique_statuts() {
 						'titre' => statut_titre($objet, $statut),
 					);
 				}
-				$liste[ $objet ] = $_statuts;
+				$liste[$objet] = $_statuts;
 			}
 		}
 	}
+
 	return $liste;
 }
 
@@ -119,9 +122,9 @@ function plan_lister_objets_rubrique_statuts() {
  * dans une rubrique ainsi que leurs statuts utilisables pour l'auteur en cours
  *
  * @uses plan_lister_objets_rubrique_statuts()
- * 
+ *
  * @return array
-**/
+ **/
 function plan_lister_objets_rubrique_statuts_auteur() {
 	static $liste = null;
 	if (is_null($liste)) {
@@ -135,5 +138,6 @@ function plan_lister_objets_rubrique_statuts_auteur() {
 			}
 		}
 	}
+
 	return $liste;
 }

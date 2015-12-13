@@ -10,7 +10,9 @@
  * @package    SPIP\Plan\Action
  */
 
-if (!defined('_ECRIRE_INC_VERSION')) return;
+if (!defined('_ECRIRE_INC_VERSION')) {
+	return;
+}
 
 
 function action_deplacer_objets_dist() {
@@ -34,7 +36,7 @@ function action_deplacer_objets_dist() {
 		return plan_json_erreur(_T("plan:erreur_aucun_identifiant") . " " . _T("plan:erreur_deplacement_impossible"));
 	}
 	if ($id_rubrique_old == $id_rubrique_new) {
-		return plan_json_erreur(_T("plan:erreur_rubriques_parentes_incorrectes") . " "  . _T("plan:erreur_deplacement_impossible"));
+		return plan_json_erreur(_T("plan:erreur_rubriques_parentes_incorrectes") . " " . _T("plan:erreur_deplacement_impossible"));
 	}
 	if ($objet != 'rubrique' and !$id_rubrique_new) {
 		return plan_json_erreur(_T("plan:erreur_rubriques_parentes_incorrectes") . " " . _T("plan:erreur_deplacement_impossible"));
@@ -72,7 +74,8 @@ function action_deplacer_objets_dist() {
 	// dans certains cas… on ne reçoit pas d'erreur… et pourtant !
 	if (!$errors) {
 		// on verifie qu'il n'y a plus d'objets à l'ancien emplacement
-		$ids = sql_allfetsel($_id_table, $table, array(sql_in($_id_table, $ids), $champ . '=' . sql_quote($id_rubrique_old)));
+		$ids = sql_allfetsel($_id_table, $table,
+			array(sql_in($_id_table, $ids), $champ . '=' . sql_quote($id_rubrique_old)));
 		$ids = array_map('array_shift', $ids);
 		if ($ids) {
 			foreach ($ids as $id) {
@@ -85,7 +88,7 @@ function action_deplacer_objets_dist() {
 	return plan_json_envoi(array(
 		'done' => true,
 		'success' => $success,
-		'errors'  => $errors,
+		'errors' => $errors,
 	));
 }
 
@@ -98,6 +101,6 @@ function plan_json_erreur($msg) {
 	return plan_json_envoi(array(
 		'done' => false,
 		'success' => array(),
-		'errors'  => array($msg)
+		'errors' => array($msg)
 	));
 }
