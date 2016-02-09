@@ -8,6 +8,7 @@ lang/paquet-plan_fr.php -text
 lang/plan.xml -text
 lang/plan_en.php -text
 lang/plan_fr.php -text
+lang/plan_pt_br.php -text
 lib/jstree/LICENSE-MIT -text
 lib/jstree/README.md -text
 lib/jstree/dist/jstree.js -text
