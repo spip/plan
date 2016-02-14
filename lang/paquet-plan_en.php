@@ -10,8 +10,8 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
-	'plan_description' => 'This plugin improves the page « Site Map» of the private space by displaying a folded structure and allowing to filter by article status.
-', # RELIRE
+	'plan_description' => 'This plugin improves the page "Site Map" of the private space by displaying a foldable structure and allowing to filter by article status.
+',
 	'plan_nom' => 'Site Map in the Private Space',
 	'plan_slogan' => 'Improves the page Site Map of the private space.'
 );
