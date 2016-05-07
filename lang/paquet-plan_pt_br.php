@@ -15,5 +15,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'plan_nom' => 'Mapa do site na área restrita',
 	'plan_slogan' => 'Melhora a página mapa do site da área restrita'
 );
-
-?>

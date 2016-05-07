@@ -15,5 +15,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'plan_nom' => 'Site Map in the Private Space',
 	'plan_slogan' => 'Improves the page Site Map of the private space.'
 );
-
-?>

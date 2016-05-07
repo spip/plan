@@ -15,5 +15,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'plan_nom' => 'Sitemap in het privé gedeelte',
 	'plan_slogan' => 'Verbeterde sitemap in het privé gedeelte'
 );
-
-?>
