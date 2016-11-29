@@ -38,11 +38,11 @@ function action_plan_dist() {
 	}
 
 	$fond = "prive/squelettes/inclure/plan-$objet";
-	header("Content-Type: text/html; charset=" . $GLOBALS['meta']['charset']);
+	header('Content-Type: text/html; charset=' . $GLOBALS['meta']['charset']);
 
 	if (trouver_fond($fond)) {
 		echo recuperer_fond($fond, $env);
 	} else {
-		echo "";
+		echo '';
 	}
 }
