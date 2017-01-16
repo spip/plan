@@ -1,12 +1,10 @@
 <script type="text/javascript">
-(function($){
-$(document).ready(function(){
+jQuery(function($){
 	$('body.plan #contenu #mytree_actions .pliage').html(
 		"<a href=\"#\" onClick=\"jQuery('#racine').jstree('open_all'); return false;\"><:lien_tout_deplier:></a> | " +
 		"<a href=\"#\" onClick=\"jQuery('#racine').jstree('close_all'); return false;\"><:lien_tout_replier:></a>"
 	);
 });
-})(jQuery);
 </script>
 
 <div id="mytree_actions">
