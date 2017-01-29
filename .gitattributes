@@ -3,6 +3,7 @@ action/deplacer_objets.php -text
 action/plan.php -text
 css/plan_prive.css.html -text
 lang/paquet-plan.xml -text
+lang/paquet-plan_ar.php -text
 lang/paquet-plan_de.php -text
 lang/paquet-plan_en.php -text
 lang/paquet-plan_fr.php -text
