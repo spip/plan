@@ -114,7 +114,7 @@ $.fn.spiptree = function(options) {
 	// un clic d'une feuille amène sur son lien
 	// mais… éviter que le plugin 'state' clique automatiquement lorsqu'il restaure
 	// la sélection précédente !
-	$mytree.one("restore_state.jstree", function () {
+	$mytree.one("state_ready.jstree", function () {
 		$(this).on("changed.jstree", function (e, data) {
 			data.instance.save_state();
 			var node = data.instance.get_node(data.node, true);
