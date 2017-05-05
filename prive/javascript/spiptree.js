@@ -46,9 +46,20 @@ $.fn.spiptree = function(options) {
 			"animation" : 0,
 			"check_callback" : function (op, node, par, pos, more) {
 				if (op === "move_node") {
-					// à la fin d'un déplacement, demander 1 fois (et 1 seule) 
-					// une confirmation, même si on déplace 5 items d'un coup
+					// à la fin d'un déplacement
+					// (pas de trig spécifique au début d'un déplacement :( )
 					if (more && more.core) {
+						// ne pas tenter de déplacer une box non chargée
+						var box = (node.type.substring(0, 4) == 'box_');
+						if (box && (!node.children || !node.children.length)) {
+							$('#contenu p.success, #contenu div.error').remove();
+							$("#contenu #mytree_actions").after("<div class='error removable' onClick='$(this).remove();'><p /><ul class='spip' /></div>");
+							$box = $("#contenu div.error");
+							$box.find('p').text(options.textes.deplacement.vide + ' ' + options.textes.deplacement.suggerer_deplier);
+							return false;
+						}
+
+						// Demander 1 fois (et 1 seule) une confirmation, même si on déplace 5 items d'un coup
 						if (options.confirm.move === null) {
 							options.confirm.move = confirm( options.textes.deplacement.confirmation );
 							// enlever les messages de réussite ou d'erreur pour en avoir des tout neufs
@@ -175,6 +186,8 @@ $.fn.spiptree = function(options) {
 			}
 		}
 
+		$mytree.animateLoading();
+
 		$.ajax({
 			url: options.urls.deplacer,
 			data: params,
@@ -210,6 +223,7 @@ $.fn.spiptree = function(options) {
 						$box.find('ul').append("<li>[ " + i + "] " + error+ "</li>");
 					});
 				}
+				$mytree.endLoading();
 			}
 
 			if (recharge_plan) {
