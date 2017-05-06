@@ -12,10 +12,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// D
 	'deplacement_en_echec' => 'Échec d’un déplacement.',
+	'deplacement_identifiant_absent' => 'Aucun ',
 	'deplacement_reussi' => 'Déplacement réussi.',
 	'deplacements_en_echec' => '@nb@ déplacements en échec.',
 	'deplacements_reussis' => '@nb@ déplacements réussis.',
-	'deplacement_identifiant_absent' => 'Aucun ',
 
 	// E
 	'erreur_aucun_identifiant' => 'Aucun identifiant d’objet.',
@@ -28,7 +28,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'plan_titre' => 'Plan du site dans l’espace privé',
 
 	// S
-	'suggerer_deplier' => 'Cela peut provenir du déplacement d’un grand groupe : dans ce cas la liste de ses enfants n’est pas chargée. Vous devez déplier le bloc (il se chargera), le replier, puis le redéplacer.',
+	'suggerer_deplier' => 'Cela peut provenir du déplacement d’un grand groupe : dans ce cas la liste de ses enfants n’est pas chargée. Vous devez déplier le bloc (il se chargera), le replier, puis le redéplacer.',
 
 	// T
 	'tous_les_statuts' => 'Tous les statuts'
