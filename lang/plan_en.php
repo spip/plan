@@ -14,6 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// D
 	'deplacement_en_echec' => 'Move failed.',
+	'deplacement_identifiant_absent' => 'None ',
 	'deplacement_reussi' => 'Successful move.',
 	'deplacements_en_echec' => '@nb@ moves failed.',
 	'deplacements_reussis' => '@nb@ moves successful.',
@@ -27,6 +28,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'plan_titre' => 'Site Map in the private space.',
+
+	// S
+	'suggerer_deplier' => 'This could be caused by the displacement of a large group: in that case its children list could not be loaded. You should unfold the bloc (which will load it), fold it again then move it again.',
 
 	// T
 	'tous_les_statuts' => 'Status All'
