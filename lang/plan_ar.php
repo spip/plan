@@ -14,7 +14,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// D
 	'deplacement_en_echec' => 'فشل النقل.',
-	'deplacement_reussi' => 'نحج النقل.',
+	'deplacement_identifiant_absent' => 'لا يوجد',
+	'deplacement_reussi' => 'نجح النقل.',
 	'deplacements_en_echec' => '@nb@ نقل فاشل.',
 	'deplacements_reussis' => '@nb@  نقل ناجح.',
 
@@ -27,6 +28,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'plan_titre' => 'خريطة الموقع في المجال الخاص',
+
+	// S
+	'suggerer_deplier' => 'قد يأتي ذلك من نقل مجموعة كبيرة: في هذه الحالة لم يتم تحميل لائحة العناصر المنضوية. يجب فلش الكتلة (ليتم تحميلها) واعادة طيها ثم نقلها مجدداً.',
 
 	// T
 	'tous_les_statuts' => 'كل الوضعيات'
