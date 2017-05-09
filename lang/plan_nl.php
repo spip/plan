@@ -14,6 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// D
 	'deplacement_en_echec' => 'Verplaatsen is mislukt.',
+	'deplacement_identifiant_absent' => 'Geen ',
 	'deplacement_reussi' => 'Verplaatsen voltooid.',
 	'deplacements_en_echec' => '@nb@ verplaatsingen mislukt.',
 	'deplacements_reussis' => '@nb@ verplaatsingen voltooid.',
@@ -27,6 +28,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'plan_titre' => 'Sitemap in het privé gedeelte',
+
+	// S
+	'suggerer_deplier' => 'Dit kan worden veroorzaakt door het verplaatsen van een grote groep: in dat geval wordt de lijst niet geladen. Vouw het blok open (het laadt opnieuw), vouw het dicht en verplaats het.',
 
 	// T
 	'tous_les_statuts' => 'Alle statussen'
