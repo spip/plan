@@ -14,6 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// D
 	'deplacement_en_echec' => 'Verschieben fehlgeschlagen',
+	'deplacement_identifiant_absent' => 'Nichts',
 	'deplacement_reussi' => 'Verschieben erfolgreich',
 	'deplacements_en_echec' => '@nb@ fehlgeschlagene Verschiebenoperationen',
 	'deplacements_reussis' => '@nb@ erfolgreiche Verschiebeoperationen',
@@ -27,6 +28,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'plan_titre' => 'Sitemap des Redaktionssystems',
+
+	// S
+	'suggerer_deplier' => 'Ursache kann das Verschieben einer grossen Gruppe sein. In diesem Fall wird die Liste der abhängigen Elemente nichtgeladen. Sie müssen den Block aufklappen (er wird dann geladen), ihn zuklappen und anschliessend erneut verschieben.',
 
 	// T
 	'tous_les_statuts' => 'Jeder Status'
