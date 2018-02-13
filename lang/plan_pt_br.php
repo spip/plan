@@ -14,6 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// D
 	'deplacement_en_echec' => 'Falha de uma deslocação.',
+	'deplacement_identifiant_absent' => 'Nenhum',
 	'deplacement_reussi' => 'Deslocação efetuada.',
 	'deplacements_en_echec' => '@nb@ deslocações falharam.',
 	'deplacements_reussis' => '@nb@ deslocações efetuadas.',
@@ -27,6 +28,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'plan_titre' => 'Mapa do site na área privada',
+
+	// S
+	'suggerer_deplier' => 'Isso poder ocorrer devido à deslocação de um grande grupo: neste caso a lista dos seus subordinados não é carregada. Você deve expandir o bloco (ele se carregará), retraí-lo de novo e, então, deslocá-lo.',
 
 	// T
 	'tous_les_statuts' => 'Todos os statuts'
