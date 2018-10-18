@@ -52,7 +52,7 @@ function action_deplacer_objets_dist() {
 
 	// ne modifier que si les emplacements n'ont pas déjà changé !
 	$ids = sql_allfetsel($_id_table, $table, array(sql_in($_id_table, $ids), $champ . '=' . sql_quote($id_rubrique_old)));
-	$ids = array_map('array_shift', $ids);
+	$ids = array_column($ids, $_id_table);
 
 	include_spip('action/editer_objet');
 
@@ -79,7 +79,7 @@ function action_deplacer_objets_dist() {
 			$table,
 			array(sql_in($_id_table, $ids), $champ . '=' . sql_quote($id_rubrique_old))
 		);
-		$ids = array_map('array_shift', $ids);
+		$ids = array_column($ids, $_id_table);
 		if ($ids) {
 			foreach ($ids as $id) {
 				$errors["$objet-$id"] = _T('plan:erreur_deplacement');
