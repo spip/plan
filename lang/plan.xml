@@ -1,4 +1,10 @@
-<traduction module="plan" gestionnaire="salvatore" url="https://trad.spip.net" source="svn://zone.spip.org/spip-zone/_core_/plugins/plan/lang/" reference="fr">
+<traduction
+	module="plan"
+	id="plan--plan-c8bf3"
+	gestionnaire="salvatore"
+	url="https://trad.spip.net"
+	source="svn://zone.spip.org/spip-zone/_core_/plugins/plan/lang"
+	reference="fr">
 	<langue code="ar" url="https://trad.spip.net/tradlang_module/plan?lang_cible=ar" total="14" traduits="14" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
 	</langue>
@@ -12,8 +18,7 @@
 	<langue code="eo" url="https://trad.spip.net/tradlang_module/plan?lang_cible=eo" total="14" traduits="14" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="gpl" lien="https://trad.spip.net/auteur/gpl" />
 	</langue>
-	<langue code="fr" url="https://trad.spip.net/tradlang_module/plan?lang_cible=fr" total="14" traduits="14" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
-	</langue>
+	<langue code="fr" url="https://trad.spip.net/tradlang_module/plan?lang_cible=fr" total="14" traduits="14" relire="0" modifs="0" nouveaux="0" pourcent="100.00" />
 	<langue code="fr_fem" url="https://trad.spip.net/tradlang_module/plan?lang_cible=fr_fem" total="14" traduits="14" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="b_b" lien="https://trad.spip.net/auteur/b_b" />
 	</langue>
