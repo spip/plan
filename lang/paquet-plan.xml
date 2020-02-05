@@ -1,9 +1,9 @@
 <traduction
 	module="paquet-plan"
-	id="paquet-plan--plan-c8bf3"
+	id="paquet-plan--plan-f80de"
 	gestionnaire="salvatore"
 	url="https://trad.spip.net"
-	source="svn://zone.spip.org/spip-zone/_core_/plugins/plan/lang"
+	source="https://git.spip.net/spip/plan.git"
 	reference="fr">
 	<langue code="ar" url="https://trad.spip.net/tradlang_module/paquet-plan?lang_cible=ar" total="3" traduits="3" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
