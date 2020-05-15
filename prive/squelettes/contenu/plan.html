@@ -17,8 +17,8 @@ jQuery(function($){
 		]
 	</span>
 
-[(#SET{statut,[(#ENV{statuts}|?{[(#ENV{statuts}|explode{-}|end)],#NULL})]})]
-[(#SET{objet,[(#ENV{statuts}|?{[(#ENV{statuts}|explode{-}|reset)],#NULL})]})]
+[(#SET{statut,[(#ENV{statuts}|?{[(#ENV{statuts}|explode{-}|end)]})]})]
+[(#SET{objet,[(#ENV{statuts}|?{[(#ENV{statuts}|explode{-}|reset)]})]})]
 
 	<span class='statut #GET{objet}'>
 		<B_objets_statuts>
