@@ -21,9 +21,11 @@
 <BOUCLE_objets_statuts(DATA){source table, #REM|plan_lister_objets_rubrique_statuts}>
 #mytree_actions .statut.#CLE {
 	background-image: url([(#CLE|objet_icone{16}|extraire_attribut{src})]);
+  background-size: 16px;
 }
 #mytree_actions .statut form optgroup.#CLE {
 	background-image: url([(#CLE|objet_icone{16}|extraire_attribut{src})]);
+	background-size: 16px;
 }
 <BOUCLE_statuts(DATA){source table, #VALEUR}>
 [(#SET{class,[(#_objets_statuts:CLE)]-#CLE})]
@@ -34,12 +36,14 @@
 </BOUCLE_objets_statuts>
 .plan .jstree-icon.rubrique {
 	background:url([(#VAL{rubrique}|objet_icone{16}|extraire_attribut{src})]) center center no-repeat;
+  background-size: 16px;
 }
 .plan .menu-items .menu-items { margin-top:.5em; }
 .plan .menu-items .item.group { margin-bottom: 1em; padding-top: 5px; }
 .plan .menu-items.rubriques .item > a {
 	padding-left:20px;
 	background:url([(#VAL{rubrique}|objet_icone{16}|extraire_attribut{src})]) center left no-repeat;
+	background-size: 16px;
 }
 .plan .jstree .puce_objet { margin-right:2px; }
 .plan .jstree.drag .item .jstree-icon { cursor: move; }
@@ -47,10 +51,12 @@
 <BOUCLE_icone_objets(DATA){source table, #REM|plan_lister_objets_rubrique}>
 .plan .jstree-icon.[(#VALEUR|objet_type)] {
 	background:url([(#VALEUR|objet_icone{16}|extraire_attribut{src})]) center center no-repeat;
+	background-size: 16px;
 }
 .plan .menu-items.[(#VALEUR|table_objet)] .item > a ,
 .plan .menu-items.[(#VALEUR|table_objet)] .item > strong {
 	padding-left:20px;
 	background:url([(#VALEUR|objet_icone{16}|extraire_attribut{src})]) center left no-repeat;
+  background-size: 16px;
 }
 </BOUCLE_icone_objets>
