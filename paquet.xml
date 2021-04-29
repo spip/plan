@@ -4,7 +4,7 @@
 	version="2.3.2"
 	etat="stable"
 	compatibilite="[3.3.0-dev;3.3.*]"
-	logo="prive/themes/spip/images/plan-xx.svg"
+	logo="prive/images/plan-xx.svg"
 	documentation="https://contrib.spip.net/4718"
 >
 	<nom>Plan du site dans l’espace privé</nom>
