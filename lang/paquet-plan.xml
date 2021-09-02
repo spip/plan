@@ -17,6 +17,9 @@
 	<langue code="eo" url="https://trad.spip.net/tradlang_module/paquet-plan?lang_cible=eo" total="3" traduits="3" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="gpl" lien="https://trad.spip.net/auteur/gpl" />
 	</langue>
+	<langue code="es" url="https://trad.spip.net/tradlang_module/paquet-plan?lang_cible=es" total="3" traduits="3" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="comcinco" lien="https://trad.spip.net/auteur/comcinco-7293" />
+	</langue>
 	<langue code="fr" url="https://trad.spip.net/tradlang_module/paquet-plan?lang_cible=fr" total="3" traduits="3" relire="0" modifs="0" nouveaux="0" pourcent="100.00" />
 	<langue code="fr_fem" url="https://trad.spip.net/tradlang_module/paquet-plan?lang_cible=fr_fem" total="3" traduits="3" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="b_b" lien="https://trad.spip.net/auteur/b_b" />
