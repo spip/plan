@@ -51,13 +51,13 @@ function action_deplacer_objets_dist() {
 	}
 
 	// ne modifier que si les emplacements n'ont pas déjà changé !
-	$ids = sql_allfetsel($_id_table, $table, array(sql_in($_id_table, $ids), $champ . '=' . sql_quote($id_rubrique_old)));
+	$ids = sql_allfetsel($_id_table, $table, [sql_in($_id_table, $ids), $champ . '=' . sql_quote($id_rubrique_old)]);
 	$ids = array_column($ids, $_id_table);
 
 	include_spip('action/editer_objet');
 
-	$errors = $success = array();
-	$modifs = array('id_parent' => $id_rubrique_new);
+	$errors = $success = [];
+	$modifs = ['id_parent' => $id_rubrique_new];
 
 	foreach ($ids as $id) {
 		if (autoriser('modifier', $objet, $id)) {
@@ -77,7 +77,7 @@ function action_deplacer_objets_dist() {
 		$ids = sql_allfetsel(
 			$_id_table,
 			$table,
-			array(sql_in($_id_table, $ids), $champ . '=' . sql_quote($id_rubrique_old))
+			[sql_in($_id_table, $ids), $champ . '=' . sql_quote($id_rubrique_old)]
 		);
 		$ids = array_column($ids, $_id_table);
 		if ($ids) {
@@ -88,11 +88,11 @@ function action_deplacer_objets_dist() {
 		}
 	}
 
-	return plan_json_envoi(array(
+	return plan_json_envoi([
 		'done' => true,
 		'success' => $success,
 		'errors' => $errors,
-	));
+	]);
 }
 
 function plan_json_envoi($data) {
@@ -101,9 +101,9 @@ function plan_json_envoi($data) {
 }
 
 function plan_json_erreur($msg) {
-	return plan_json_envoi(array(
+	return plan_json_envoi([
 		'done' => false,
-		'success' => array(),
-		'errors' => array($msg)
-	));
+		'success' => [],
+		'errors' => [$msg]
+	]);
 }

@@ -26,12 +26,12 @@ function action_plan_dist() {
 	include_spip('inc/utils');
 	$objet = table_objet(_request('objet'));
 
-	$env = array(
+	$env = [
 		'id_rubrique' => intval(_request('id_rubrique')),
 		// pour le dépliement d'une rubrique, ne pas lister le contenu récursivement
 		'lister' => ($objet == 'rubriques') ? 'rubrique' : 'tout',
 		'conteneur' => 'non'
-	);
+	];
 
 	if ($statut = _request('statut')) {
 		$env['statut'] = $statut;
