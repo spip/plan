@@ -1,0 +1,132 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 11
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 4
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 2
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function id_table_objet not found\\.$#"
+			count: 1
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 3
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function objet_modifier not found\\.$#"
+			count: 1
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function objet_type not found\\.$#"
+			count: 1
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function sql_allfetsel not found\\.$#"
+			count: 2
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function sql_in not found\\.$#"
+			count: 2
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function sql_quote not found\\.$#"
+			count: 2
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function table_objet_sql not found\\.$#"
+			count: 1
+			path: action/deplacer_objets.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 3
+			path: action/plan.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 1
+			path: action/plan.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 3
+			path: action/plan.php
+
+		-
+			message: "#^Function recuperer_fond not found\\.$#"
+			count: 1
+			path: action/plan.php
+
+		-
+			message: "#^Function table_objet not found\\.$#"
+			count: 1
+			path: action/plan.php
+
+		-
+			message: "#^Function trouver_fond not found\\.$#"
+			count: 1
+			path: action/plan.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: plan_fonctions.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 2
+			path: plan_fonctions.php
+
+		-
+			message: "#^Function lister_tables_objets_sql not found\\.$#"
+			count: 2
+			path: plan_fonctions.php
+
+		-
+			message: "#^Function session_get not found\\.$#"
+			count: 1
+			path: plan_fonctions.php
+
+		-
+			message: "#^Function statut_image not found\\.$#"
+			count: 1
+			path: plan_fonctions.php
+
+		-
+			message: "#^Function statut_titre not found\\.$#"
+			count: 1
+			path: plan_fonctions.php
+
+		-
+			message: "#^Function statuts_articles_visibles not found\\.$#"
+			count: 1
+			path: plan_fonctions.php
+
+		-
+			message: "#^Function trouver_fond not found\\.$#"
+			count: 1
+			path: plan_fonctions.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 2
+			path: prive/squelettes/inclure/plan-articles_fonctions.php
+

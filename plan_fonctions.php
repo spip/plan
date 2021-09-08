@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Fonctions pour le plugin Plan du site dans l’espace privé
  *
@@ -60,7 +61,7 @@ function balise_PLAN_AFFICHER_LISTE_dist($p) {
 function plan_lister_objets_rubrique() {
 	static $liste = null;
 	if (is_null($liste)) {
-		$liste = array();
+		$liste = [];
 		$tables = lister_tables_objets_sql();
 		unset($tables['spip_rubriques']);
 		foreach ($tables as $cle => $desc) {
@@ -93,7 +94,7 @@ function plan_lister_objets_rubrique_statuts() {
 	if (is_null($liste)) {
 		$objets = plan_lister_objets_rubrique();
 		include_spip('inc/puce_statut');
-		$liste = array();
+		$liste = [];
 		foreach ($objets as $table => $null) {
 			$desc = lister_tables_objets_sql($table);
 			// l'objet possède un statut
@@ -101,12 +102,12 @@ function plan_lister_objets_rubrique_statuts() {
 				$statuts = array_keys($desc['statut_textes_instituer']);
 				$objet = $desc['table_objet'];
 				// obtenir titre et image du statut
-				$_statuts = array();
+				$_statuts = [];
 				foreach ($statuts as $statut) {
-					$_statuts[$statut] = array(
+					$_statuts[$statut] = [
 						'image' => statut_image($objet, $statut),
 						'titre' => statut_titre($objet, $statut),
-					);
+					];
 				}
 				$liste[$objet] = $_statuts;
 			}
