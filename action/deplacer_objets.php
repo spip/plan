@@ -97,7 +97,7 @@ function action_deplacer_objets_dist() {
 
 function plan_json_envoi($data) {
 	header('Content-Type: application/json; charset=' . $GLOBALS['meta']['charset']);
-	echo json_encode($data);
+	echo json_encode($data, JSON_THROW_ON_ERROR);
 }
 
 function plan_json_erreur($msg) {
