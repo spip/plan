@@ -12,7 +12,7 @@
 				class="item[ (#ENV{lister}|in_any{#LISTE{rubrique,tout}}|non)jstree-closed]"
 				data-objet='rubrique'>
 				<a
-					href="[(#ID_RUBRIQUE|generer_url_entite{rubrique})]"
+					href="[(#ID_RUBRIQUE|generer_objet_url{rubrique})]"
 					[hreflang="(#ENV{lang}|=={#LANG}|non|?{#LANG})"]
 					title="[(#VAL{rubrique}|objet_info{texte_objet}|_T) #ID_RUBRIQUE]">
 						<strong>[(#TITRE|couper{100}|sinon{<:info_sans_titre:>})]</strong>
