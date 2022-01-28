@@ -1,7 +1,7 @@
 <paquet
 	prefix="plan"
 	categorie="navigation"
-	version="3.1.0-dev"
+	version="4.0.0-dev"
 	etat="dev"
 	compatibilite="[4.1.0-dev;4.1.*]"
 	logo="prive/images/plan-xx.svg"
