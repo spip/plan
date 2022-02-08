@@ -3,7 +3,7 @@
 	categorie="navigation"
 	version="4.0.0-dev"
 	etat="dev"
-	compatibilite="[4.1.0-dev;4.1.*]"
+	compatibilite="[4.1.0-alpha;4.1.*]"
 	logo="prive/images/plan-xx.svg"
 	documentation="https://contrib.spip.net/4718"
 >
