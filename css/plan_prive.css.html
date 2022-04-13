@@ -5,27 +5,28 @@
 #mytree_actions input,
 #mytree_actions .pliage { margin-right:2em; }
 #mytree_actions .statut {
-	padding-left:20px;
-	background: transparent left 5px no-repeat;
+	padding-left:1.25rem;;
+	background: transparent left 0.3125rem no-repeat;
 	display:inline-block;
 }
 #mytree_actions .statut form { display:inline; }
 #mytree_actions .statut form optgroup {
-	margin-top:.3em; padding:5px 5px 5px 25px;
-	background: transparent 3px 5px no-repeat;
+	margin-top:.3em;
+	padding:0.3125rem 0.3125rem 0.3125rem 1.5rem;
+	background: transparent 0.1875rem 0.3125rem no-repeat;
 }
 #mytree_actions .statut form option {
-	padding:2px 2px 2px 20px;
-	background: transparent 2px center no-repeat;
+	padding:0.125rem 0.125rem 0.125rem 1.25rem;
+	background: transparent 0.125rem center no-repeat;
 }
-<BOUCLE_objets_statuts(DATA){source table, #REM|plan_lister_objets_rubrique_statuts}>
+<BOUCLE_objets_statuts(DATA){source table, #NULL|plan_lister_objets_rubrique_statuts}>
 #mytree_actions .statut.#CLE {
 	background-image: url([(#CLE|objet_icone{16}|extraire_attribut{src})]);
-  background-size: 16px;
+	background-size: 1rem;
 }
 #mytree_actions .statut form optgroup.#CLE {
 	background-image: url([(#CLE|objet_icone{16}|extraire_attribut{src})]);
-	background-size: 16px;
+	background-size: 1rem;
 }
 <BOUCLE_statuts(DATA){source table, #VALEUR}>
 [(#SET{class,[(#_objets_statuts:CLE)]-#CLE})]
@@ -36,27 +37,27 @@
 </BOUCLE_objets_statuts>
 .plan .jstree-icon.rubrique {
 	background:url([(#VAL{rubrique}|objet_icone{16}|extraire_attribut{src})]) center center no-repeat;
-  background-size: 16px;
+	background-size: 1rem;
 }
 .plan .menu-items .menu-items { margin-top:.5em; }
-.plan .menu-items .item.group { margin-bottom: 1em; padding-top: 5px; }
+.plan .menu-items .item.group { margin-bottom: 1em; padding-top: 0.3125em; }
 .plan .menu-items.rubriques .item > a {
-	padding-left:20px;
+	padding-left:1.25rem;
 	background:url([(#VAL{rubrique}|objet_icone{16}|extraire_attribut{src})]) center left no-repeat;
-	background-size: 16px;
+	background-size: 66.66%;
 }
 .plan .jstree .puce_objet { margin-right:2px; }
 .plan .jstree.drag .item .jstree-icon { cursor: move; }
 .plan .jstree.drag .item .jstree-ocl { cursor: pointer; }
-<BOUCLE_icone_objets(DATA){source table, #REM|plan_lister_objets_rubrique}>
+<BOUCLE_icone_objets(DATA){source table, #NULL|plan_lister_objets_rubrique}>
 .plan .jstree-icon.[(#VALEUR|objet_type)] {
 	background:url([(#VALEUR|objet_icone{16}|extraire_attribut{src})]) center center no-repeat;
-	background-size: 16px;
+	background-size: 66.66%;
 }
 .plan .menu-items.[(#VALEUR|table_objet)] .item > a ,
 .plan .menu-items.[(#VALEUR|table_objet)] .item > strong {
-	padding-left:20px;
+	padding-left:1.25rem;
 	background:url([(#VALEUR|objet_icone{16}|extraire_attribut{src})]) center left no-repeat;
-  background-size: 16px;
+  background-size: 66.66%;
 }
 </BOUCLE_icone_objets>
