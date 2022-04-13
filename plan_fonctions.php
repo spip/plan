@@ -58,17 +58,29 @@ function balise_PLAN_AFFICHER_LISTE_dist($p) {
  *
  * @return array [table -> chemin du squelette]
  **/
-function plan_lister_objets_rubrique() {
-	static $liste = null;
-	if (is_null($liste)) {
-		$liste = [];
+function plan_lister_objets_rubrique($id_rubrique = null) {
+	static $objets_possibles = null;
+	$liste = [];
+	if (is_null($objets_possibles)) {
+		// tous les objets possibles, pour style les icones
+		$objets_possibles = [];
 		$tables = lister_tables_objets_sql();
 		unset($tables['spip_rubriques']);
 		foreach ($tables as $cle => $desc) {
-			if (isset($desc['field']['id_rubrique'])) {
-				if (trouver_fond('prive/squelettes/inclure/plan-' . $desc['table_objet'])) {
-					$liste[$cle] = $desc['table_objet'];
-				}
+			if (trouver_fond('prive/squelettes/inclure/plan-' . $desc['table_objet'])) {
+				$objets_possibles[objet_type($cle)] = $desc['table_objet'];
+			}
+		}
+	}
+
+	if (is_null($id_rubrique)) {
+		$liste = $objets_possibles;
+	}
+	else {
+		$enfants = objet_lister_enfants('rubrique', $id_rubrique);
+		foreach ($enfants as $enfant) {
+			if (!isset($liste[$enfant['objet']]) and isset($objets_possibles[$enfant['objet']])) {
+				$liste[$enfant['objet']] = $objets_possibles[$enfant['objet']];
 			}
 		}
 	}
@@ -95,21 +107,20 @@ function plan_lister_objets_rubrique_statuts() {
 		$objets = plan_lister_objets_rubrique();
 		include_spip('inc/puce_statut');
 		$liste = [];
-		foreach ($objets as $table => $null) {
-			$desc = lister_tables_objets_sql($table);
+		foreach ($objets as $objet => $table) {
+			$desc = lister_tables_objets_sql(table_objet_sql($table));
 			// l'objet possède un statut
 			if (!empty($desc['statut_textes_instituer'])) {
 				$statuts = array_keys($desc['statut_textes_instituer']);
-				$objet = $desc['table_objet'];
 				// obtenir titre et image du statut
 				$_statuts = [];
 				foreach ($statuts as $statut) {
 					$_statuts[$statut] = [
-						'image' => statut_image($objet, $statut),
-						'titre' => statut_titre($objet, $statut),
+						'image' => statut_image($table, $statut),
+						'titre' => statut_titre($table, $statut),
 					];
 				}
-				$liste[$objet] = $_statuts;
+				$liste[$table] = $_statuts;
 			}
 		}
 	}
